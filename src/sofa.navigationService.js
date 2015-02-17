@@ -1,6 +1,6 @@
 angular.module('sofa.navigationService', [
     'sofa.couchService',
-    'sofa.trackingService',
+    'sofa.tracking',
     'sofa.urlConstructionService',
     'sofa.urlParserService'
 ])

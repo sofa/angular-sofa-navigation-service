@@ -1,5 +1,5 @@
 /**
- * angular-sofa-navigation-service - v0.1.0 - Fri Feb 06 2015 15:15:49 GMT+0100 (CET)
+ * angular-sofa-navigation-service - v0.1.0 - Tue Feb 17 2015 15:12:50 GMT+0100 (CET)
  * http://www.sofa.io
  *
  * Copyright (c) 2014 CouchCommerce GmbH (http://www.couchcommerce.com / http://www.sofa.io) and other contributors
@@ -9,7 +9,7 @@
 ;(function (angular) {
 angular.module('sofa.navigationService', [
     'sofa.couchService',
-    'sofa.trackingService',
+    'sofa.tracking',
     'sofa.urlConstructionService',
     'sofa.urlParserService'
 ])
