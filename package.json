@@ -29,6 +29,13 @@
   },
   "devDependencies": {
     "gulp": "^3.8.10",
-    "shared-sofa-component-tasks": "^0.8.0"
+    "shared-sofa-component-tasks": "^0.10.0"
+  },
+  "dependencies": {
+    "sofa-couch-service": "^0.15.0",
+    "sofa-state-resolver-service": "^0.4.2",
+    "sofa-tracking": "^0.7.2",
+    "sofa-url-construction-service": "^0.5.2",
+    "sofa-url-parser-service": "^0.3.2"
   }
 }

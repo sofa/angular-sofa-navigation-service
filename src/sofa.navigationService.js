@@ -2,7 +2,8 @@ angular.module('sofa.navigationService', [
     'sofa.couchService',
     'sofa.tracking',
     'sofa.urlConstructionService',
-    'sofa.urlParserService'
+    'sofa.urlParserService',
+    'sofa.stateResolverService'
 ])
 
 .factory('navigationService', function ($location, $window, couchService, trackingService, urlConstructionService, urlParserService, stateResolverService) {
