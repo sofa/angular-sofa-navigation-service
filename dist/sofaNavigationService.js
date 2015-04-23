@@ -1,5 +1,5 @@
 /**
- * angular-sofa-navigation-service - v0.1.0 - Tue Feb 17 2015 15:12:50 GMT+0100 (CET)
+ * angular-sofa-navigation-service - v0.1.2 - Thu Apr 23 2015 11:50:45 GMT+0200 (CEST)
  * http://www.sofa.io
  *
  * Copyright (c) 2014 CouchCommerce GmbH (http://www.couchcommerce.com / http://www.sofa.io) and other contributors
@@ -11,7 +11,8 @@ angular.module('sofa.navigationService', [
     'sofa.couchService',
     'sofa.tracking',
     'sofa.urlConstructionService',
-    'sofa.urlParserService'
+    'sofa.urlParserService',
+    'sofa.stateResolverService'
 ])
 
 .factory('navigationService', ["$location", "$window", "couchService", "trackingService", "urlConstructionService", "urlParserService", "stateResolverService", function ($location, $window, couchService, trackingService, urlConstructionService, urlParserService, stateResolverService) {
@@ -82,16 +83,16 @@ angular.module('sofa.navigationService', [
             .then(function (state) {
                 if (state.stateName === 'product') {
                     couchService
-                        .getCategory(state.stateParams.category)
+                        .getCategory(state.stateParams.categoryId)
                         .then(function(category){
                             self.navigateToUrl(category.getOriginFullUrl());
                         });
                 }
                 else if (state.stateName === 'products') {
-                    navigateToParentCategory(state.stateParams.category);
+                    navigateToParentCategory(state.stateParams.categoryId);
                 }
                 else if (state.stateName === 'categories') {
-                    navigateToParentCategory(state.stateParams.category);
+                    navigateToParentCategory(state.stateParams.categoryId);
                 }
                 else {
                     //TODO: The method is actually designed to go up in the tree
